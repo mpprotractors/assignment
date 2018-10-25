@@ -20,7 +20,7 @@ D -> ABCEFGH
 E -> FH  
 F -> H  
 
-## Assessment
+## TODO
 
 * Create a web page that accepts user input
 * Input can be processed either at the backend or in frontend. We leave it to your chose.
