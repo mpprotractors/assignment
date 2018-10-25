@@ -4,21 +4,21 @@ The following example dispays the transitive dependencies between letters of the
 
 If this is input:
 
-A BC  
-B CE  
-C G  
-D AF  
-E F  
-F H  
+A -> BC  
+B -> CE  
+C -> G  
+D -> AF  
+E -> F  
+F -> H  
 
 Then this is output:
 
-A BCEFGH  
-B CEFGH  
-C G  
-D ABCEFGH  
-E FH  
-D H  
+A -> BCEFGH  
+B -> CEFGH  
+C -> G  
+D -> ABCEFGH  
+E -> FH  
+F -> H  
 
 ## Assessment
 
