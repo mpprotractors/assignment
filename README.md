@@ -1,6 +1,6 @@
 ## Overview
 
-We ask you to implement dependency resolution algorithm. Transitive dependenvies should be included as well. The following example dispays the transitive dependencies between letters of the alphabet. If A depends on B and B depends on C, then A also depends on C.
+We ask you to implement dependency resolution algorithm. Transitive dependencies should be included as well. The following example dispays the transitive dependencies between letters of the alphabet. If A depends on B and B depends on C, then A also depends on C.
 
 If this is input:
 
