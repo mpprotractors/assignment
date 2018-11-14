@@ -23,7 +23,7 @@ F -> H
 ## TO-DO
 
 * Create a web page that accepts user input
-* Input can be processed either at the backend or in frontend. We leave it to your choice.
+* Input can be processed either in the backend or in the frontend. We leave it to your choice.
 * Show results to user on a web page.
 * You are free to use whichever frontend tooling you want.
 
