@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Mp.Protractors.Test.Core;
 
 namespace Mp.Protractors.Test
 {
@@ -22,6 +23,7 @@ namespace Mp.Protractors.Test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<ISolver, Solver>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

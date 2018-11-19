@@ -1,0 +1,25 @@
+﻿.dependency {
+    width: 30px;
+    margin-left: 15px;
+}
+
+.dependencyButton {
+    margin-left: 15px;
+}
+
+.fact {
+    width: 30px;
+    margin-right: 15px;
+}
+
+.addRow {
+    margin-top: 20px;
+}
+
+.rule {
+    margin-bottom: 10px;
+}
+
+.result {
+    margin-top: 25px;
+}
