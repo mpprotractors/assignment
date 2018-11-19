@@ -75,13 +75,12 @@ namespace  Mp.Protractors.Test.Core
             {
                 var solution = new List<Fact>();
                 var factInList = factsList.First(x => x.Item == fact.Item);
-                var tmp = new List<Fact>();
 
                 // Faster impl (for strings)
                 // var solvedFact = SolveInternal(factInList);
 
                 // Removing duplicate dependencies with Distinct
-                // result.Add(new FactDTO(factInList.Item, solvedFact.Select(x => x.Item).Distinct().ToList()));
+                // result.Result.Add(new FactDTO(factInList.Item, solvedFact.Select(x => x.Item).Distinct().ToList()));
 
                 // Logically more correct impl
                 var usedFacts = new List<Fact>();
@@ -167,6 +166,7 @@ namespace  Mp.Protractors.Test.Core
                 {
                     var joined = dependency.Solution.Except(usedFacts).ToList();
                     result.AddRange(joined);
+                    usedFacts.AddRange(joined);
                 }
                 
             }
