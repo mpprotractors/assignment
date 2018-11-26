@@ -1,7 +1,7 @@
 <div *ngFor="let row of rows; let i = index" class="row">
     <input [(ngModel)]="row.key" (input)="row.key = row.key.toUpperCase()" class="small-input" maxlength="1"/>
     <span>-></span>
-    <input *ngFor="let dependency of row.dependencies; let i = index; trackBy:indexTracker" [(ngModel)]="row.dependencies[i]" (input)="row.dependencies[i] = row.dependencies[i].toUpperCase()" class="small-input" maxlength="1"/>
+    <input *ngFor="let dependency of row.dependencies; let i = index;" [(ngModel)]="row.dependencies[i]" (input)="row.dependencies[i] = row.dependencies[i].toUpperCase()" class="small-input" maxlength="1"/>
     <button (click)="addDependency(i)">+</button>
 </div>
 <div class="row">

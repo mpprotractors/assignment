@@ -17,10 +17,6 @@ export class FormBuilderComponent {
         this.addRow();
     }
 
-    public indexTracker(index: number, value: any) {
-        return index;
-    }
-
     public addRow(): void {
         this.rows.push({
             key: '',
