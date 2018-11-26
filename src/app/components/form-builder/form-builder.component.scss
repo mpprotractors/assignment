@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    .row {
+        display: flex;
+        margin: 5px 0;
+
+        .text {
+            margin: 0 5px;
+        }
+        .small-input {
+            max-width: 20px;
+            margin: 0 10px;
+        }
+    }
+}

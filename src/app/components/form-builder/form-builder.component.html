@@ -1,0 +1,15 @@
+<div *ngFor="let row of rows; let i = index" class="row">
+    <input [(ngModel)]="row.key" (input)="row.key = row.key.toUpperCase()" class="small-input" maxlength="1"/>
+    <span>-></span>
+    <input *ngFor="let dependency of row.dependencies; let i = index; trackBy:indexTracker" [(ngModel)]="row.dependencies[i]" (input)="row.dependencies[i] = row.dependencies[i].toUpperCase()" class="small-input" maxlength="1"/>
+    <button (click)="addDependency(i)">+</button>
+</div>
+<div class="row">
+    <button (click)="addRow()">Add row</button>
+    <button (click)="submit()">Submit</button>
+</div>
+<div *ngFor="let result of results" class="row">
+    <span class="text">{{result.key}}</span>
+    <span class="text">-></span>
+    <span *ngFor="let dependency of result.dependencies" class="text">{{dependency}}</span>
+</div>
