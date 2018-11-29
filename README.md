@@ -53,7 +53,7 @@ F -> H
 In order to save you some time we had added some bootstrapping into project.
 
 Entry point for JavaScript code is located in `Scripts/main.js`
-All files from `Scripts` folder are being copies by `grunt` into `wwwroot/scripts` folder from where they are being served to clients. 
+All files from `Scripts` folder are being copies by `gulp` into `wwwroot/scripts` folder from where they are being served to clients. 
 
 `index.html` is also located in `wwwroot` folder.
 
