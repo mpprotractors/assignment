@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Mp.Protractors.Test.Services;
 
 namespace Mp.Protractors.Test
 {
@@ -21,6 +22,7 @@ namespace Mp.Protractors.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IDependencyResolutionService, DependencyResolutionService>();
             services.AddMvc();
         }
 
