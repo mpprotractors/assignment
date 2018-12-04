@@ -52,7 +52,12 @@ namespace Mp.Protractors.Test.Services
             var resolvedNodes = new List<NodeModel>();
             var seenNodes = new List<NodeModel>();
             var node = Nodes.FirstOrDefault(n => n.Node.ToLower() == nodeName.ToLower());
-            Resolve(node, resolvedNodes, seenNodes, true);
+
+            if (node != null)
+            {
+                Resolve(node, resolvedNodes, seenNodes, true);
+            }
+
             return resolvedNodes.Select(n => n.Node).OrderBy(n => n);
         }
 

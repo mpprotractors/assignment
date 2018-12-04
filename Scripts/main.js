@@ -5,7 +5,20 @@
 })();
 
 function bootstrap() {
-    let element = document.createElement("h3");
-    element.innerText = "Hello. Feel free to change me";
-    document.body.appendChild(element);
+    var getDependencies = () => {
+        var input = $("#node").val();
+        $.ajax({
+            url: window.location.pathname + "api/Dependency/" + input
+        }).then(function (data) {
+            data.forEach(function (item) {
+                $('#nodeDependencies').append(item);
+            });
+        });
+    };
+
+    $("#getNodeButton").on("click",
+        function () {
+            $('#nodeDependencies').html('');
+            getDependencies();
+        });
 }
