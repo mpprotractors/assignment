@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Mp.Protractors.BLL.IServices;
+using Mp.Protractors.BLL.Services;
+using Mp.Protractors.Web.Middlewares;
 
 namespace Mp.Protractors.Test
 {
@@ -22,19 +25,14 @@ namespace Mp.Protractors.Test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddScoped<IDependencyResolverService, DependencyResolverService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
+            app.UseHttpStatusCodeExceptionMiddleware();
             app.UseDefaultFiles(); 
             app.UseStaticFiles();
             app.UseMvc();

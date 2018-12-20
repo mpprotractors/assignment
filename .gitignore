@@ -6,6 +6,9 @@ nupkg/
 # Visual Studio Code
 .vscode
 
+# Visual Studio Settings
+.vs
+
 # Node Modules
 node_modules/
 
@@ -30,3 +33,4 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+*/wwwroot/scripts/
