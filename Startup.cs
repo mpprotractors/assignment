@@ -23,7 +23,7 @@ namespace Mp.Protractors.Test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddTransient<IDependencyContainer, DependencyContainer>();
+            services.AddSingleton<ICharDependencyContainer, CharDependencyContainer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
