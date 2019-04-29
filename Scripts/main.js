@@ -28,7 +28,6 @@ function bootstrap() {
 function submitDescriptor(dependencyDescriptor, successCallback, errorCallback) {
     let http = new XMLHttpRequest();
     let url = '/api/dependency-resolution/descriptors';
-    let params = 'B -> CE';
     http.open('POST', url, true);
 
     //Send the proper header information along with the request
