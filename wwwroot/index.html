@@ -6,7 +6,28 @@
     <title>Test Assignment</title>
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
     <script src="scripts/main.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <label>Input</label>
+        <div>
+            <input type="text" id="descriptor-input"/>
+            <button type="button" id="submit-btn">Submit</button>
+        </div>
+    </div>
+    <div>
+        <span class="error" id="error-output"></span>
+    </div>
+    <div>
+        <label>Output</label>
+        <div>
+            <textarea rows="8" cols="20" id="dependencies-output"></textarea>
+        </div>
+    </div>
 </body>
 </html>

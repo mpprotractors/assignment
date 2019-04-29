@@ -27,17 +27,23 @@ namespace Mp.Protractors.Test.Controllers
         [HttpPost("descriptors")]
         public IActionResult RegisterItem([FromBody] string input)
         {
+            if (string.IsNullOrEmpty(input))
+            {
+                return BadRequest("Input must be provided");
+            }
+
             try
             {
                 var descriptor = Descriptor.Parse(input);
                 _dependencyContainer.Register(descriptor);
-
-                return NoContent();
             }
             catch (Exception e)
             {
                 return BadRequest(e.Message);
             }
+
+            var descriptors = _dependencyContainer.GetDescriptorsIncludingTransitiveDependencies();
+            return Ok(descriptors);
         }
     }
 }
