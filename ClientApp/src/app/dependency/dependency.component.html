@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<h1>
+ {{ title }}
+</h1>
+
+<body>
+    <p id="rows">
+        <input id="letterId"type="text" placeholder="input letter here" />->
+        <input id="dependencyId" class="inputArray" type="text" placeholder="input dependencies separated by comma here" />
+        <button title="click here to add dependencies" (click)="submitData()" >Submit data</button>
+    </p>
+
+    <div *ngIf="newlyConstructedArr">
+        Designed dependencies: {{ newlyConstructedArr }}
+    </div>
+
+    <br />
+    <div>
+        <button title="click here to calculate dependencies of each letter" (click)="calculate()" >Calculate</button>
+    </div>
+
+    <br />
+    <div *ngIf="outputToUser">
+        <p *ngFor="let item of outputToUser">
+            {{ item }} <br />
+        </p>
+    </div>
+</body>
